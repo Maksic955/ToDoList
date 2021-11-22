@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(100deg, #5b1aa7f3, #0f0bdd);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5em;
+}
+
+/*Below set position for header and form for adding new tasks*/
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 3v;
+    background: white;
+    
+}
+
+form input {
+    border-radius: 1.5vh 0 0 1.5vh;
+    color: #0f0bdd;
+}
+
+form button {
+    border-radius: 0 1.5vh 1.5vh 0;
+    cursor: pointer;
+    background: white;
+    color: #0f0bdd;
+    transition: all 0.5s ease;
+}
+
+form button:hover {
+    background: #0f0bdd;
+    color: white;
+}
+
+.todo-cntinr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-lst {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
