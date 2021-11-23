@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 /*Below set position for header and form for adding new tasks*/
@@ -28,26 +28,25 @@ form input, form button {
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
-    border-radius: 3v;
+    border-radius: 3vh;
     background: white;
-    
 }
 
 form input {
     border-radius: 1.5vh 0 0 1.5vh;
-    color: #0f0bdd;
+    color: #5b1aa7f3;
 }
 
 form button {
     border-radius: 0 1.5vh 1.5vh 0;
     cursor: pointer;
     background: white;
-    color: #0f0bdd;
+    color: #5b1aa7f3;
     transition: all 0.5s ease;
 }
 
 form button:hover {
-    background: #0f0bdd;
+    background: #5b1aa7f3;
     color: white;
 }
 
@@ -55,6 +54,7 @@ form button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 
 .todo-lst {
@@ -70,4 +70,90 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 1.25vh 1.25vh 1.25vh 1.25vh;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+.trash-btn, 
+.complete-btn {
+    background: #5b1aa7f3;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.trash-btn {
+    border-radius: 0 1.5vh 1.5vh 0;
+
+}
+
+.complete-btn:hover {
+    background: #0b991c;
+    transition: all 0.5s ease;
+}
+
+.trash-btn:hover {
+    background: #960c0c;
+    transition: all 0.5s ease;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, 
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #5b1aa7f3;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #5b1aa7f3;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: #5b1aa7f3;
 }
